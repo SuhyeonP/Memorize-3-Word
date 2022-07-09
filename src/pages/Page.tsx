@@ -1,9 +1,7 @@
-const Page = (): JSX.Element => {
+export const Page = (): JSX.Element => {
   return (
     <>
       <p>this is page</p>
     </>
   );
 };
-
-export default Page;
