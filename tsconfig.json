@@ -30,8 +30,8 @@
       "types/*": [
         "types/*"
       ],
-      "atom/*": [
-        "component/atom/*"
+      "component/*": [
+        "component/*"
       ]
     }
   },

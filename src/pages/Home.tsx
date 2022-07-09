@@ -1,8 +1,16 @@
+import { Button } from 'component/atom';
 import { MouseEvent } from 'react';
-import Text from 'atom/Text';
 import { useCallback } from 'react';
-import Button from 'atom/Button';
 import { IValueLabel } from 'types/index';
+import styled from '@emotion/styled';
+
+const ButtonsStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100%;
+`;
 
 export const Home = (): JSX.Element => {
   const siteMap: IValueLabel[] = [
@@ -30,19 +38,12 @@ export const Home = (): JSX.Element => {
   );
 
   return (
-    <>
-      <div>
-        {siteMap.map(site => (
-          <Button key={site.value} onClick={callEvent(site.value)} type="button" onlyText>
-            <Text typography="important" fontWeight="semibold">
-              {site.label}
-            </Text>
-          </Button>
-        ))}
-      </div>
-      <Text typography="explain" fontWeight="semibold">
-        본 암기법은 파란펜 암기법과, 세단어 암기법을 이용하였습니다.
-      </Text>
-    </>
+    <ButtonsStyled>
+      {siteMap.map(site => (
+        <Button key={site.value} onClick={callEvent(site.value)} type="button" onlyText>
+          {site.label}
+        </Button>
+      ))}
+    </ButtonsStyled>
   );
 };

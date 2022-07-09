@@ -25,7 +25,7 @@ export default defineConfig({
     alias: {
       hook: path.resolve(__dirname, 'src/hook'),
       pages: path.resolve(__dirname, 'src/pages'),
-      atom: path.resolve(__dirname, 'src/component/atom'),
+      component: path.resolve(__dirname, 'src/component'),
       style: path.resolve(__dirname, 'src/style'),
       types: path.resolve(__dirname, 'src/types'),
     },

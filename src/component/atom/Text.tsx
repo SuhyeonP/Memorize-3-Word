@@ -32,6 +32,7 @@ export interface BaseProps {
   stringToJSX?: boolean;
   display?: CSSProperties['display'];
   textAlign?: CSSProperties['textAlign'];
+  lineHeight?: CSSProperties['lineHeight'];
   /**
    * @description word-break: keep-all을 적용할지 여부를 나타냅니다.
    * @default true
@@ -61,6 +62,7 @@ function Text<Element extends keyof JSX.IntrinsicElements = 'span'>(props: TextP
     stringToJSX,
     display = 'inline-block',
     textAlign,
+    lineHeight,
     style,
     spanAttributes,
     wordBreak = true,
@@ -94,6 +96,7 @@ function Text<Element extends keyof JSX.IntrinsicElements = 'span'>(props: TextP
         color,
         WebkitLineClamp: isMultiLine ? ellipsisAfterLines : undefined,
         textAlign,
+        lineHeight,
         ...style,
       }}
     >

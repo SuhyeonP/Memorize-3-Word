@@ -4,20 +4,13 @@ import useId from 'hook/useId';
 import { colors } from 'style/colors';
 
 interface Props extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color'> {
-  fullWidth?: boolean;
+  width?: string;
   color?: string;
   onlyText?: boolean;
   backgroundColor?: string;
 }
 const Button = forwardRef(function Button(props: Props, forwardedRef: Ref<HTMLButtonElement>) {
-  const {
-    onlyText,
-    fullWidth = true,
-    children,
-    color = colors.main_black,
-    backgroundColor = 'inherit',
-    ...rest
-  } = props;
+  const { onlyText, width = '100%', children, color = colors.main_black, backgroundColor = 'inherit', ...rest } = props;
   const buttonId = useId();
 
   const commonCss = useRef(css`
@@ -48,7 +41,7 @@ const Button = forwardRef(function Button(props: Props, forwardedRef: Ref<HTMLBu
 
   const buttonCss = useRef(css`
     border-radius: 16px;
-    width: ${fullWidth ? '100%' : 'auto'};
+    width: ${width};
     color: ${color};
     font-size: 17px;
     height: 56px;
