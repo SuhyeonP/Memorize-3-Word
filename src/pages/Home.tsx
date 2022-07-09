@@ -33,8 +33,8 @@ export const Home = (): JSX.Element => {
     <>
       <div>
         {siteMap.map(site => (
-          <Button key={site.value} onClick={callEvent(site.value)} type="button">
-            <Text typography="sub_title" fontWeight="semibold">
+          <Button key={site.value} onClick={callEvent(site.value)} type="button" onlyText>
+            <Text typography="important" fontWeight="semibold">
               {site.label}
             </Text>
           </Button>

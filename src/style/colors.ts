@@ -7,4 +7,6 @@ export const colors = {
   main_yellow: '#F2EEAC',
   main_white: '#F2F2F2',
   main_gray: 'rgba(191,191,191,0.48)',
+  main_green: '#8AA6A3',
+  text_shadow: '#A5A692',
 };
