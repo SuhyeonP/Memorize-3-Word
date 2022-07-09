@@ -23,6 +23,8 @@ export default defineConfig({
     alias: {
       hook: path.resolve(__dirname, 'src/hook'),
       pages: path.resolve(__dirname, 'src/pages'),
+      atom: path.resolve(__dirname, 'src/component/atom'),
+      style: path.resolve(__dirname, 'src/style'),
     },
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
   },

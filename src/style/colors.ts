@@ -1,0 +1,9 @@
+export const colors = {
+  main_blue: '#2E66B0',
+  main_red: '#E93E44',
+  main_black: '#1B1C29',
+  main_shadow: '#E8E8E8',
+  main_peach: '#F7C296',
+  main_yellow: '#F2EEAC',
+  main_white: '#F2F2F2',
+};
