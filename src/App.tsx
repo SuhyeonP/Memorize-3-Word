@@ -24,6 +24,7 @@ export default function App() {
               box-sizing: border-box;
               padding: 0;
               margin: 0;
+              font-family: SUIT-Medium;
             }
 
             html,
