@@ -27,6 +27,9 @@
       "style/*": [
         "style/*"
       ],
+      "types/*": [
+        "types/*"
+      ],
       "atom/*": [
         "component/atom/*"
       ]

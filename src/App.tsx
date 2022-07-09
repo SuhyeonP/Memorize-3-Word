@@ -4,6 +4,9 @@ import { GlobalPortal } from './GlobalPortal';
 import { Router } from 'pages/Routes';
 import { ReactNode } from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import './style/sass/app.scss';
+import Text from 'atom/Text';
+import { colors } from 'style/colors';
 
 export default function App() {
   return (
@@ -49,7 +52,12 @@ function Layout({ children }: { children: ReactNode }) {
         height: auto;
       `}
     >
-      <div css={css``}>{children}</div>
+      <div css={css``}>
+        <Text typography="main_title" fontWeight="bold" color={colors.main_blue}>
+          Frontend 암기
+        </Text>
+        {children}
+      </div>
     </div>
   );
 }

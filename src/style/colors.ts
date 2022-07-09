@@ -6,4 +6,5 @@ export const colors = {
   main_peach: '#F7C296',
   main_yellow: '#F2EEAC',
   main_white: '#F2F2F2',
+  main_gray: 'rgba(191,191,191,0.48)',
 };

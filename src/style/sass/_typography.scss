@@ -1,0 +1,27 @@
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@mixin _typography($name, $font-size, $line-height, $skeleton-border-radius) {
+  $font-size-number: strip-unit($font-size);
+
+  .typography-#{$name},
+  .font-size--#{$font-size-number} {
+    font-size: $font-size;
+    font-size: var(--honey-font-size-#{$font-size-number});
+    line-height: $line-height;
+    line-height: var(--honey-line-height-#{$font-size-number});
+  }
+}
+
+@include _typography('main_title', 30px, 1.333, 8px);
+@include _typography('sub_title', 23px, 1.346, 7px);
+@include _typography('important', 17px, 1.409, 6px);
+@include _typography('writable', 20px, 1.45, 6px);
+@include _typography('blue_pen', 17px, 1.5, 5.5px);
+@include _typography('question', 15px, 1.5, 5px);
+@include _typography('explain', 13px, 1.5, 5px);

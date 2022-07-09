@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import reactRefresh from '@vitejs/plugin-react-refresh';
+import sassDts from 'vite-plugin-sass-dts';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path');
@@ -18,6 +19,7 @@ export default defineConfig({
       },
     }),
     reactRefresh(),
+    sassDts(),
   ],
   resolve: {
     alias: {
@@ -25,6 +27,7 @@ export default defineConfig({
       pages: path.resolve(__dirname, 'src/pages'),
       atom: path.resolve(__dirname, 'src/component/atom'),
       style: path.resolve(__dirname, 'src/style'),
+      types: path.resolve(__dirname, 'src/types'),
     },
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
   },
