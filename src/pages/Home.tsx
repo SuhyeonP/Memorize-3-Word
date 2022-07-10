@@ -1,6 +1,5 @@
 import { Button } from 'component/atom';
 import { MouseEvent } from 'react';
-import { useCallback } from 'react';
 import { IValueLabel } from 'types/index';
 import styled from '@emotion/styled';
 
@@ -29,13 +28,10 @@ export const Home = (): JSX.Element => {
     { label: '세 단어 암기법', value: 'three-words' },
   ];
 
-  const callEvent = useCallback(
-    (target: string) => (e: MouseEvent) => {
-      e.preventDefault();
-      console.log(target);
-    },
-    []
-  );
+  const callEvent = (target: string) => (e: MouseEvent) => {
+    e.preventDefault();
+    console.log(target);
+  };
 
   return (
     <ButtonsStyled>
